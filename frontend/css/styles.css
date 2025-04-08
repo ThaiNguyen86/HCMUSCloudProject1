@@ -1,12 +1,33 @@
 body {
+    background-image: url('../assets/img/background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
     font-family: 'Segoe UI', sans-serif;
 }
 
 .table td, .table th {
     vertical-align: middle;
+    text-align: center;
 }
 
 #task-list .btn {
     min-width: 70px;
 }
+header{
+    background: rgba(0, 0, 0, 0.100); 
+    transition: all 0.3s ease;
+}
+.glass-effect {
+    background: rgba(255, 255, 255, 0.05); 
+    backdrop-filter: blur(2px);       
+    -webkit-backdrop-filter: blur(2px);
+
+    transition: all 0.3s ease;
+    min-height: 100vh;
+    min-width: 100%;
+}
+
+
 
