@@ -1,0 +1,36 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Environment variables
+.env
+
+# Build output (nếu có thư mục build trong tương lai)
+dist/
+build/
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Database files (nếu có file dump hoặc backup)
+*.sql
+*.db
+
+# Coverage reports (nếu chạy test với coverage)
+coverage/
