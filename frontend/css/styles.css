@@ -1,0 +1,12 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.table td, .table th {
+    vertical-align: middle;
+}
+
+#task-list .btn {
+    min-width: 70px;
+}
+

@@ -1,7 +1,11 @@
-const API_URL = 'http://localhost:3000';
+const API_URL = 'http://localhost:4000';
 
-export async function getTasks() {
-    const response = await fetch(`${API_URL}/tasks`);
+export async function getTasks(filters = {}) {
+    const query = new URLSearchParams(filters).toString();
+    const response = await fetch(`${API_URL}/tasks${query ? `?${query}` : ''}`);
+    if (!response.ok) {
+        throw new Error(`Lỗi khi lấy danh sách công việc: ${response.statusText}`);
+    }
     return response.json();
 }
 
@@ -11,7 +15,30 @@ export async function createTask(task) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(task),
     });
+    if (!response.ok) {
+        throw new Error(`Lỗi khi tạo công việc: ${response.statusText}`);
+    }
     return response.json();
 }
 
-// Thêm hàm cho PUT, DELETE tương tự
+export async function updateTask(id, task) {
+    const response = await fetch(`${API_URL}/tasks/${id}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(task),
+    });
+    if (!response.ok) {
+        throw new Error(`Lỗi khi cập nhật công việc: ${response.statusText}`);
+    }
+    return response.json();
+}
+
+export async function deleteTask(id) {
+    const response = await fetch(`${API_URL}/tasks/${id}`, {
+        method: 'DELETE',
+    });
+    if (!response.ok) {
+        throw new Error(`Lỗi khi xóa công việc: ${response.statusText}`);
+    }
+    return response.json();
+}
