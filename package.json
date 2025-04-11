@@ -2,7 +2,10 @@
   "name": "task_manager_web",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "dev": "nodemon backend/index.js",
+    "start": "node backend/index.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
