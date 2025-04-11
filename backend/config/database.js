@@ -1,13 +1,13 @@
 const mysql = require('mysql2/promise');
 require('dotenv').config();
 
-const connection = mysql.createConnection({
-    host: 'project1-taskmanager-db.cv86akkwwra1.ap-southeast-1.rds.amazonaws.com',
-    user: 'admin',
-    password: 'Thai668084',
-    database: 'task_manager_db'
-});
-connection.connect();
+// const connection = mysql.createConnection({
+//     host: 'project1-taskmanager-db.cv86akkwwra1.ap-southeast-1.rds.amazonaws.com',
+//     user: 'admin',
+//     password: 'Thai668084',
+//     database: 'task_manager_db'
+// });
+// connection.connect();
 
 const pool = mysql.createPool({
     host: process.env.DB_HOST,
