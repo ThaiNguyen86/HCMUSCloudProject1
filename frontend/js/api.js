@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:4000';
+const API_URL = 'http://54.169.123.105:4000';
 
 export async function getTasks(filters = {}) {
     const query = new URLSearchParams(filters).toString();
