@@ -1,4 +1,4 @@
-const API_URL = 'http://project1-taskmanager-asg-1-317068115.ap-southeast-1.elb.amazonaws.com/';
+const API_URL = 'http://project1-taskmanager-asg-1-317068115.ap-southeast-1.elb.amazonaws.com';
 
 export async function getTasks(filters = {}) {
     const query = new URLSearchParams(filters).toString();
